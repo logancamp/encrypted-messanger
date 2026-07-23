@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.geometry.Insets?>
+<?import atlantafx.base.controls.Spacer?>
+<VBox prefHeight="400.0" prefWidth="600.0" spacing="20" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cwru.messaging.HomeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label>Contacts</Label>
+    <HBox spacing="20">
+        <ListView fx:id="contactListView" />
+        <VBox spacing="20">
+            <HBox spacing="200">
+                <Text styleClass="title1">Conversation History</Text>
+                <Button fx:id="newMessageButton" styleClass="accent" onMouseClicked="#newMessage">New Message</Button>
+            </HBox>
+
+            <HBox spacing="20">
+                <Label>To:</Label>
+                <TextField fx:id="usernameField" />
+            </HBox>
+
+            <ListView fx:id="messageListView" />
+
+            <Spacer />
+            <HBox spacing="20">
+                <Label>Message:</Label>
+                <TextField fx:id="messageToSend" />
+                <Button fx:id="sendButton" styleClass="accent" onMouseClicked="#sendMessage">Send</Button>
+            </HBox>
+
+        </VBox>
+    </HBox>
+</VBox>
